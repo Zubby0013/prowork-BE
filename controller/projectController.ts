@@ -6,14 +6,14 @@ import projectModel from "../model/projectModel";
 
 export const createProject = async (req: Request, res: Response) => {
     try {
-      const { projectName, comment } = req.body;
+      const { projectName, description } = req.body;
       console.log(projectName);
   
       const { userID } = req.params;
   
       const project = await projectModel.create({
         projectName,
-        comment,
+        description,
         myTask: {
           todo: {
             id: "todo",

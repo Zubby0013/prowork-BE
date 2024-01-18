@@ -2,7 +2,7 @@ import { Document, Schema, Types, model } from "mongoose";
 
 interface iProject {
   projectName: string;
-  comment: string;
+  description: string;
   budget: number;
   budgetLeft: number;
   budgetGivenOut: number;
@@ -19,7 +19,7 @@ const projectModel = new Schema<iProjectData>(
       type: String,
     },
 
-    comment: {
+    description: {
       type: String,
     },
 

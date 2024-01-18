@@ -93,12 +93,13 @@ export const readAllUser = async(req:Request,res:Response)=>{
     }
 };
 
+
 export const readUserCookies = async(req:any,res:Response)=>{
     try {
-        const user = req.session;
+        const user = req.session.userID;
         
         return res.status(200).json({
-            message: "error reading cookies",
+            message: " reading cookies",
             data: user
         })
     } catch (error) {
